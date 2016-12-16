@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+	<title>Index</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+
+	<header>
+		<div class="btns">
+			<button>Import</button>
+			<button>Save</button>
+		</div>
+		<form id="settings">
+
+			<table><tbody><tr>
+				<td class="tr">
+					<label for="frequency">Frequency:</label>
+				</td>
+				<td>
+					<input type="range" id="frequency" name="frequency" min="0" max="1" step=".01" />
+					<input type="number" id="frequencyNum" name="frequency" min="0" max="1" step=".01" />
+				</td>
+			</tr><tr>
+				<td class="tr">
+					<label for="octaves">Octaves:</label>
+				</td>
+				<td>
+					<input type="number" id="octaves" name="octaves" />
+				</td>
+			</tr><tr>
+				<td class="tr">
+					<label for="seed">Seed:</label>
+				</td>
+				<td>
+					<input type="number" id="seed" name="seed" />
+				</td>
+			</tr></tbody></table>
+
+		</form>
+	</header>
+
+	<main>
+		<div class="left">
+			<img id="input" />
+		</div>
+		<div class="right">
+			<svg xmlns="http://www.w3.org/2000/svg" id="previewSvg" width="100%" height="100%">
+				<defs>
+					<filter id="turbulence">
+						<feTurbulence id="previewAnim" type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="46"></feTurbulence>
+						<feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" scale="10"></feDisplacementMap>
+					</filter>
+				</defs>
+				<image id="previewImg" filter="url(#turbulence)" xlink:href=""/>
+			</svg>
+		</div>
+	</main>
+
+	
+	<script type='text/javascript' src='const.js'></script>
+	<script type='text/javascript' src='menu.js'></script>
+	<script type='text/javascript' src='script.js'></script>
+	<script type='text/javascript' src='snapshot.js'></script>

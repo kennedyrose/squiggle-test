@@ -1,0 +1,66 @@
+html, body{
+	padding: 0;
+	margin: 0;
+	font-family: Verdana;
+}
+img{
+	max-height: 100%;
+	max-width: 100%;
+	height: auto;
+}
+.tr{
+	text-align: right;
+}
+
+
+header, main{
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+header{
+	height: 100px;
+	top: 0;
+	border-bottom: 1px solid #666;
+}
+main{
+	top: 100px;
+	bottom: 0;
+}
+
+
+.btns, #settings{
+	padding: 10px;
+}
+#settings{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.btns button{
+	width: 100px;
+	height: 30px;
+	margin-right: 10px;
+}
+.left, .right{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+main img{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.left{
+	left: 0;
+	right: 50%;
+	border-right: 1px solid #666;
+}
+.right{
+	left: 50%;
+	right: 0;
+}
+

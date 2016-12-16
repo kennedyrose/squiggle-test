@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<style>
+html, body{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+</style>
+
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" id="anim">
+	<defs>
+		<filter id="turbulence">
+			<feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="46"></feTurbulence>
+			<feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" scale="10"></feDisplacementMap>
+		</filter>
+	</defs>
+	<image id="stageImg" filter="url(#turbulence)" xlink:href=""/>
+</svg>
